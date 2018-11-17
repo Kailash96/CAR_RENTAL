@@ -1,0 +1,108 @@
+@charset "ISO-8859-1";
+.test{
+	width: 15s0px;
+   	padding: 10px 15px;
+   	border: 2px solid red;
+   	border-radius: 4px;
+   	background-color: transparent;
+   	color: red;
+   	font-family: Trebuchet MS;
+}
+.submit{
+	padding: 10px 25px;
+	background-color: transparent;
+	border: 2px solid red;
+	color: red;
+	border-radius: 4px;
+}
+.submit:hover{
+	transition-duration: 1s;
+	background-color: red;
+	color:white;
+}
+p{
+	color:red;
+	font-family: Trebuchet MS;
+}
+.right{
+	float: right;
+	padding-top: 100px;
+	padding-right: 100px;
+}
+.icons{
+	width: 100px;
+	padding: 10px;
+}
+ul {
+    list-style-type: none;
+}
+ul li{
+	display: inline;
+}
+.container{
+	width: 100%;
+}
+.leftClient{
+	width: 30%;
+	float: left;
+}
+.rightClient{
+	width: 70%;
+	float: right;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    font-family: Trebuchet MS;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+input[type=submit] {
+    font-family: Trebuchet ms;
+    padding: 10px;
+    background-color:black;
+    border:2px solid black;
+    color: white;
+    border-radius:7%;
+}
+input[type=submit]:hover {
+    transition-duration: 0.5s;
+    background-color:transparent;
+    color: black;
+}
+
+.anchor{
+	font-family: Trebuchet ms;
+    padding: 10px;
+    background-color:transparent;
+    border:2px solid black;
+    text-decoration:none;
+    color: black;
+    border-radius:7%;
+}
+.anchor:hover{
+	transition-duration: 0.5s;
+    background-color:black;
+    color: white;
+}
+
+.error{
+	color: red;
+	margin-top:5px;
+	margin-bottom:0px;
+	font-family: Trebuchet ms;
+}
+.success{
+	font-family: Trebuchet ms;
+	margin-top:5px;
+	margin-bottom:0px;
+}
