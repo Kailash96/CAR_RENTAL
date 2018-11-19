@@ -26,7 +26,7 @@
 %>
 <form action="updateClient.jsp" method="post">
 	Enter Client ID: <input type="text" name="clid">
-	<input type="submit" value="Find">
+	<input type="submit" class="test2" value="Find">
 </form>
 <br>
 <jsp:include page="viewAllClients.jsp"></jsp:include>

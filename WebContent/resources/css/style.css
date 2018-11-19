@@ -66,7 +66,7 @@ th {
     color: white;
 }
 
-input[type=submit] {
+.test2 {
     font-family: Trebuchet ms;
     padding: 10px;
     background-color:black;
@@ -74,7 +74,7 @@ input[type=submit] {
     color: white;
     border-radius:7%;
 }
-input[type=submit]:hover {
+.test2:hover {
     transition-duration: 0.5s;
     background-color:transparent;
     color: black;

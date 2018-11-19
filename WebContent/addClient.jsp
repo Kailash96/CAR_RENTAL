@@ -112,7 +112,7 @@
 		<a class="anchor" href="client.html">&lt; Back</a>
 		<input type="hidden" name="submitted" value="true">
 	</td>
-	<td><input type="submit" value="Add Client"></td>
+	<td><input type="submit" class="test2" value="Add Client"></td>
 </tr>
 </table>
 </form>

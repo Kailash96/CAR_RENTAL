@@ -32,7 +32,7 @@
 %>
 <form action="delClient.jsp" method="post">
 	<input type="hidden" name="isSubmitted" value="true">
-	<span>Enter Client ID: <input type="text" name="clid"> <input type="submit" value="Delete"></span>
+	<span>Enter Client ID: <input type="text" name="clid"> <input type="submit" class="test2" value="Delete"></span>
 </form>
 <br>
 <a class="anchor" href="client.html">&lt; Back</a>

@@ -101,7 +101,7 @@
 							<input type="hidden" name="submitted" value="true">
 							<a class="anchor" href="findClient.jsp">&lt; Back</a>
 						</td>
-						<td><input type="submit" value="Update Client"></td>
+						<td><input type="submit" class="test2" value="Update Client"></td>
 					</tr>
 					</table>
 					<script>

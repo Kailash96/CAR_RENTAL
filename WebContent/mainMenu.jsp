@@ -13,7 +13,7 @@
 <center>
 <div class="bottom">
 	<ul>
-		<li><a href=""><img class="icons" src="..\resources\img\carLogo.png"></a></li>
+		<li><a href="AddNewCar.jsp"><img class="icons" src="..\resources\img\carLogo.png"></a></li>
 		<li><a href=""><img class="icons" src="..\resources\img\bookings.png"></a></li>
 		<li><a href="client.html"><img class="icons" src="..\resources\img\clients.png"></a></li>
 		<li><a href=""><img class="icons" src="..\resources\img\return.png"></a></li>

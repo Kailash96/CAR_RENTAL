@@ -27,7 +27,6 @@
 		<th><b>Phone</b></th>
 		<th><b>Address</b></th>
 		<th><b>License Num</b></th>
-		<th><b>Status</b></th>
 	</tr>
 	<%
 		for (int i=0; i < clients.size(); i++){
@@ -42,7 +41,6 @@
 		<td style="background-color: white;"><%=client.getPhone() %></td>
 		<td style="background-color: white;"><%=client.getAddress() %></td>
 		<td style="background-color: white;"><%=client.getLisenceNum() %></td>
-		<td style="background-color: white;"><%=client.getStatus() %></td>
 	</tr>
 	<% } %>
 </table>
