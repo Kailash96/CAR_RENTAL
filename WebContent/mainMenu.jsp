@@ -6,19 +6,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Main Menu</title>
-<link rel="stylesheet" href="..\resources\css\style.css">
+<link rel="stylesheet" href="resources\css\style.css">
 </head>
-<body background="..\resources\img\car1.jpg" style="background-size: cover;background-repeat: no-repeat;">
+<body background="resources\img\car1.jpg" style="background-size: cover;background-repeat: no-repeat;">
 <f:view>
 <center>
 <div class="bottom">
 	<ul>
-		<li><a href=""><img class="icons" src="..\resources\img\carLogo.png"></a></li>
-		<li><a href=""><img class="icons" src="..\resources\img\bookings.png"></a></li>
-		<li><a href="client.html"><img class="icons" src="..\resources\img\clients.png"></a></li>
-		<li><a href=""><img class="icons" src="..\resources\img\return.png"></a></li>
-		<li><a href=""><img class="icons" src="..\resources\img\report.png"></a></li>
-		<li><a href="login.jsp"><img class="icons" src="..\resources\img\logout.png"></a></li>
+		<li><a href=""><img class="icons" src="resources\img\carLogo.png"></a></li>
+		<li><a href="booking.jsp"><img class="icons" src="resources\img\bookings.png"></a></li>
+		<li><a href="client.html"><img class="icons" src="resources\img\clients.png"></a></li>
+		<li><a href=""><img class="icons" src="resources\img\return.png"></a></li>
+		<li><a href=""><img class="icons" src="resources\img\report.png"></a></li>
+		<li><a href="login.jsp"><img class="icons" src="resources\img\logout.png"></a></li>
 	</ul>
 </div>
 </center>
