@@ -21,17 +21,18 @@
             String model = request.getParameter("carModel");
             String color = request.getParameter("carColor");
             String year = request.getParameter("year");
-            String nod = request.getParameter("nOfDays");
+            String bookingDate = request.getParameter("bookingDate");
+            int nod = Integer.parseInt(request.getParameter("nOfDays"));
             String returnDate = request.getParameter("rtrnDate");
-            String fees = request.getParameter("fees");
-            String discount = request.getParameter("discount");
-            String deposit = request.getParameter("deposit");
+            Double ppd = Double.parseDouble(request.getParameter("ppd"));
+            Double total = ppd * nod;
+            int success;
 
             Boolean valid = booking.validateClientID(clientID);
             if (valid == true){
-
+                %> <h1>Client already exists!</h1> <%
             } else {
-                success = booking.bookCar(carID, clientID);
+               success = booking.bookCar(carID, clientID, bookingDate, returnDate, ppd, total);
             }
         } else {
     %>
@@ -82,12 +83,11 @@
                 <td colspan="2">
                     <div style="text-align:center">
                         <div style="text-align:right;display:inline-block">
+                            Booking Date: <input type="date" name="bookingDate" /><br/><br/>
+                            Return Date: <input type="date" name="rtrnDate" /><br/><br/>
                             Number of Days: <input type="text" name="nOfDays" /><br/><br/>
-                            Return Date: <input type="text" name="rtrnDate" /><br/><br/>
-                            Fees: <input type="text" name="fees" /><br/><br/>
-                            Discount: <input type="text" name="discount" /><br/><br/>
-                            Deposit: <input type="text" name="deposit" /><br/><br/> 
-                            Total: <input type="text" name="total" />
+                            Price Per Day: <input type="text" name="ppd" /><br/><br/>
+                            Total: <input type="text" name="discount" /><br/><br/>
                         </div>
                     </div>
                 </td>
