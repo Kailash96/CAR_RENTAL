@@ -1,6 +1,15 @@
 package booking;
 
 import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.ejb.Stateless;
+
+import com.mysql.cj.xdevapi.Statement;
 
 @Stateless
 public class BookCar {
@@ -8,7 +17,7 @@ public class BookCar {
 	String login = "root";
     String password = "";
     
-    public int bookCar(String cid, String clid, Date bookdate, Date returnDate, float fees, float discount, float totalPayment, int Status) throws SQLException, ClassNotFoundException {
+    public int bookCar(String cid, String clid, String bookdate, String returnDate, Float fees, Float discount, Float totalPayment, int Status) throws SQLException, ClassNotFoundException {
         Status = 0;
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection(url, login, password);
@@ -18,12 +27,12 @@ public class BookCar {
         /* pstmt.setString(1, bid); */
         pstmt.setString(1, cid);
         pstmt.setString(2, clid);
-        pstmt.setSTring(3, bookdate);
-        pstmt.setSTring(4, returnDate);
-        pstmt.setSTring(5, fees);
-        pstmt.setSTring(6, discount);
-        pstmt.setSTring(7, totalPayment);
-        pstmt.setSTring(8, Status);
+        pstmt.setString(3, bookdate);
+        pstmt.setString(4, returnDate);
+        pstmt.setFloat(5, fees);
+        pstmt.setFloat(6, discount);
+        pstmt.setFloat(7, totalPayment);
+        pstmt.setInt(8, Status);
 
         int booked = pstmt.executeUpdate();
         pstmt.close();
@@ -37,8 +46,8 @@ public class BookCar {
         Boolean client = false;
 
         String queryBooking = "SELECT clientID FROM booking WHERE clid = '" + clientID + "'";
-        Statement stmt = con.createStatement();
-        ResultSeet rs = stmt.executeQuery(queryBooking);
+        Statement stmt = (Statement) con.createStatement();
+        ResultSet rs = ((java.sql.Statement) stmt).executeQuery(queryBooking);
 
         if (rs.next()){
             client = true;

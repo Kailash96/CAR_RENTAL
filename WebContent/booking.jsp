@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<jsp:useBean id="booking" class="booking.BookCar"></jsp:useBean>
 <!DOCTYPE html>
 <html>
 <head>
+<jsp:useBean id="booking" class="booking.BookCar" scope="session"></jsp:useBean>
 <meta charset="ISO-8859-1">
 <title>Booking | Car Rental</title>
 <link rel="stylesheet" href="resources\css\style.css">
