@@ -25,7 +25,6 @@
 	int phone=0;
 	String address="";
 	int liNum=0;
-	int status=0;
 	
 	String id = request.getParameter("clid");
 	ArrayList<ClientMgt> list = cm.findClient(id);
@@ -41,7 +40,6 @@
 			phone = client.getPhone();
 			address = client.getAddress();
 			liNum = client.getLisenceNum();
-			status = client.getStatus();
 		}
 %>
 			<form method="post" action="findClient.jsp" onsubmit="return validate()" name="clientForm">
@@ -96,15 +94,6 @@
 						<td>
 							<input type="number" name="licenseNum" value="<%=liNum %>">
 							<div id="liNum_error" class="error"></div>
-						</td>
-						</tr>
-					<tr>
-						<td>Status:</td>
-						<td>
-							<select name="status">
-								<option value="1">1 - Still on loan</option>
-								<option value="0">0 - Car returned</option>
-							</select>
 						</td>
 					</tr>
 					<tr>

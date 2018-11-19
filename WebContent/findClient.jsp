@@ -20,9 +20,8 @@
 			int phone2 = Integer.parseInt(request.getParameter("phone"));
 			String address2 = request.getParameter("address");
 			int liNum2 = Integer.parseInt(request.getParameter("licenseNum"));
-			int status2 = Integer.parseInt(request.getParameter("status"));
 			
-			success = cm.updateClient(id, name2, surname2, phone2, address2, liNum2, status2);
+			success = cm.updateClient(id, name2, surname2, phone2, address2, liNum2);
 		}
 %>
 <form action="updateClient.jsp" method="post">

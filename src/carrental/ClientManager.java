@@ -127,10 +127,10 @@ public class ClientManager {
 	    return remove;
 	}
 	
-	public int updateClient(String clid, String name, String surname, int phone, String address, int lisenceNum, int status) throws SQLException, ClassNotFoundException {
+	public int updateClient(String clid, String name, String surname, int phone, String address, int lisenceNum) throws SQLException, ClassNotFoundException {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, login, password);
-		String sql = "update client set name='" + name + "', surname='" + surname + "', phone='" + phone + "',  address='" + address + "', licensenum='" + lisenceNum + "', status='" + status + "' where clid='" + clid + "'";
+		String sql = "update client set name='" + name + "', surname='" + surname + "', phone='" + phone + "',  address='" + address + "', licensenum='" + lisenceNum + "' where clid='" + clid + "'";
 		Statement s = con.createStatement();
 		
 		int update = s.executeUpdate(sql);

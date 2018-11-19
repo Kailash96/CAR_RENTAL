@@ -29,7 +29,7 @@
 		int phone = Integer.parseInt(request.getParameter("phone"));
 		String address = request.getParameter("address");
 		int licenseNum = Integer.parseInt(request.getParameter("licenseNum"));
-		int status = Integer.parseInt(request.getParameter("status"));
+		int status = 0;
 		
 		String cl = newClient.validateClid(clid);
 		if (clid == cl){
@@ -105,15 +105,6 @@
 	<td>
 		<input type="text" name="licenseNum">
 		<div id="liNum_error" class="error"></div>
-	</td>
-</tr>
-<tr>
-	<td>Status:</td>
-	<td>
-		<select name="status">
-			<option value="1">1 - Still on loan</option>
-			<option value="0">0 - Car returned</option>
-		</select>
 	</td>
 </tr>
 <tr>
