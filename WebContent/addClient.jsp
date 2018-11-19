@@ -52,7 +52,8 @@
 			<option value="M">M</option>
 			<option value="T">T</option>
 		</select>
-		<input type="number" name="clid2" size="3" maxlength="3"><br>
+		<input type="number" name="clid2" size="3" maxlength="3">
+		<div id="id_error" class="error"></div>
 		<%=str %>
 	</td>
 </tr>
@@ -117,6 +118,7 @@
 </table>
 </form>
 <script>
+	var id = document.forms["clientForm"]["clid2"];
 	var name = document.forms["clientForm"]["name"];
 	var surname = document.forms["clientForm"]["surname"];
 	var date = document.forms["clientForm"]["dob"];
@@ -124,6 +126,7 @@
 	var address = document.forms["clientForm"]["address"];
 	var liNum = document.forms["clientForm"]["licenseNum"];
 	
+	var id_error = document.getElementById("id_error");
 	var name_error = document.getElementById("name_error");
 	var surname_error = document.getElementById("surname_error");
 	var date_error = document.getElementById("date_error");
@@ -131,6 +134,7 @@
 	var address_error = document.getElementById("address_error");
 	var liNum_error = document.getElementById("liNum_error");
 	
+	id.addEventListener("blur", idVerify, true);
 	name.addEventListener("blur", nameVerify, true);
 	surname.addEventListener("blur", surnameVerify, true);
 	date.addEventListener("blur", dateVerify, true);
@@ -139,6 +143,12 @@
 	liNum.addEventListener("blur", liNumVerify, true);
 	
 	function validate(){
+		if (id.value == ""){
+			id.style.border = "1px solid red";
+			id_error.innerHTML = "<h6 class='error'>ID required!</h6>";
+			id.focus();
+			return false;
+		}
 		if (name.value == ""){
 			name.style.border = "1px solid red";
 			name_error.innerHTML = "<h6 class='error'>First Name required!</h6>";
@@ -198,6 +208,13 @@
 			liNum_error.innerHTML = "<h6 class='error'>License Number contains 7 digits!</h6>";
 			liNum.focus();
 			return false;
+		}
+	}
+	function idVerify(){
+		if (id.value != ""){
+			id.style.border = "1px solid blue";
+			id_error.innerHTML = "";
+			return true;
 		}
 	}
 	function nameVerify(){
