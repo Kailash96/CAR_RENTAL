@@ -46,8 +46,6 @@ public class CarManager {
 		String query="select * from car";
 		Statement stmt=conn.createStatement();
 		ResultSet rs=stmt.executeQuery(query);
-		while(rs.next()) {
-			
-		}
+		while(rs.next());
 	}
 }

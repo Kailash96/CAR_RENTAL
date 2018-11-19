@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<jsp:useBean id="booking" class="booking.BookCar"></jsp:useBean>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +26,13 @@
             String fees = request.getParameter("fees");
             String discount = request.getParameter("discount");
             String deposit = request.getParameter("deposit");
+
+            Boolean valid = booking.validateClientID(clientID);
+            if (valid == true){
+
+            } else {
+                success = booking.bookCar(carID, clientID);
+            }
         } else {
     %>
     <center>

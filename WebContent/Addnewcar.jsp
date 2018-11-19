@@ -109,7 +109,7 @@ if(submitted){
 	<%
 	try
 	{
-		car.displaytable()
+		car.displaytable();
 	%>
 	</table>
 	    }<% 
