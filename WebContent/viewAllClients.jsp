@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>All Client</title>
-<link rel="stylesheet" href="..\resources\css\style.css">
+<link rel="stylesheet" href="resources\css\style.css">
 </head>
 <jsp:useBean id="cm" class="carrental.ClientManager" scope="session"></jsp:useBean>
 <%

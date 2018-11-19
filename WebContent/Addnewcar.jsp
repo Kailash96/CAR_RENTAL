@@ -93,18 +93,17 @@ if(submitted){
 
 <div id="side" style="float: right;width:60%;">
 	
-	<table border="2">
+	<table border='2'>
 	<tr>
-	<td>ID</td>
-	<td>Make</td>
-	<td>Model</td>
-	<td>Color</td>
-	<td>Reg</td>
-	<td>Engine</td>
-	<td>Transmission</td>
-	<td>Year</td>
-	<td>Age</td>
-	
+		<td>ID</td>
+		<td>Make</td>
+		<td>Model</td>
+		<td>Color</td>
+		<td>Reg</td>
+		<td>Engine</td>
+		<td>Transmission</td>
+		<td>Year</td>
+		<td>Age</td>
 	</tr>
 	
 	<%
@@ -113,7 +112,7 @@ if(submitted){
 		car.displaytable()
 	%>
 	</table>
-	    <% }
+	    }<% 
 	    rs.close();
 	    stmt.close();
 	    conn.close();
@@ -121,7 +120,7 @@ if(submitted){
 	catch(Exception e)
 	{
 	    
-	}
+	    }
 	
 	%>
 
